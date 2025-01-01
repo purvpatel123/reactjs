@@ -1,13 +1,16 @@
 import React from 'react'
 import './App.css'
-import LudoBoard from './LudoBoard'
+import TodoList  from './TodoList.jsx'
+
 function App() {
   
 
   return (
     <>
 
-    <LudoBoard/>
+   
+<TodoList/>
+   
       </>
   )
 }

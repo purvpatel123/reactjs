@@ -8,6 +8,11 @@ let updateBlue=()=>{
     setMoves({...moves, blue:moves.blue+1})
     console.log("Blue moves=", moves.blue)
 
+
+
+
+
+    
 }
 let updateYellow=()=>{
     setMoves({...moves, yellow:moves.yellow+1})
