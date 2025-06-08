@@ -5,7 +5,7 @@
 
 import React, { useReducer } from 'react'
 function reducer(state, action) {
-    switch (action.type) {
+    switch (action.type) { //action.type mens the type of action we are performing
         case 'increment':
             return { count : state.count + 1 }
         case 'decrement':
