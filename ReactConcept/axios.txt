@@ -1,0 +1,57 @@
+import axios from 'axios';
+
+axios({
+  method: 'post', // HTTP method: get, post, put, delete
+  url: 'https://example.com/api/users', // API endpoint
+  data: { // Request body (for POST/PUT)
+    name: 'Purv Patel',
+    email: 'purv@example.com'
+  },
+  params: { // Query params (?ref=signup)
+    ref: 'signup'
+  },
+  headers: { // HTTP headers
+    'Content-Type': 'application/json',
+    'Authorization': 'Bearer your_token_here'
+  },
+  timeout: 5000 // Timeout after 5 seconds
+})
+.then(response => {
+  console.log('Success:', response.data);
+})
+.catch(error => {
+  if (error.response) {
+    console.error('Server error:', error.response.status, error.response.data);
+  } else if (error.request) {
+    console.error('No response:', error.request);
+  } else {
+    console.error('Error:', error.message);
+  }
+});
+
+
+
+
+✅ Why use params?
+You use params when you want to:
+
+filter the data
+→ Example: show only users from "India"
+→ ?country=India
+
+paginate results
+→ Example: get page 2 with 10 items
+→ ?page=2&limit=10
+
+sort data
+→ Example: sort by price
+→ ?sort=price
+
+✅ Why Use timeout?
+To avoid waiting forever if the server is slow or down.
+
+To handle poor network conditions or slow APIs.
+
+To show an error message if the request takes too long.
+
+The timeout option in Axios sets a time limit (in milliseconds) for how long the request should wait for a response.
