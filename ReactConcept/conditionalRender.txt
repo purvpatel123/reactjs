@@ -1,0 +1,63 @@
+✅ Definition of Conditional Rendering in React
+Showing different things on the screen depending on some condition 
+
+🧠 Example in real life:
+If you're logged in – show your dashboard.
+If you're not – show the login page.
+
+🔧 In React, this is done using:
+
+if...else
+? : (ternary)
+&& (logical and)
+returning different things from a function
+
+
+✅ 1. Using if...else
+
+function Greeting({ isLoggedIn }) {
+  if (isLoggedIn) {
+    return <h2>Welcome back, user! 🎉</h2>;
+  } else {
+    return <h2>Please log in to continue. 🔒</h2>;
+  }
+}
+
+✅ 2. Using Ternary Operator (? :)
+
+function UserStatus({ isOnline }) {
+  return (
+    <p>
+      Status: {isOnline ? "🟢 Online" : "🔴 Offline"}
+    </p>
+  );
+}
+
+
+✅ 3. Using Logical AND (&&)
+
+function Notification({ hasMessage }) {
+  return (
+    <div>
+      <h3>Dashboard</h3>
+      {hasMessage && <p>You have new messages! 📩</p>}
+    </div>
+  );
+}
+
+
+✅ 4. Using Early Return (Returning different things from a function)
+
+function Profile({ user }) {
+  if (!user) {
+    return <p>❌ No user found.</p>;
+  }
+
+  return (
+    <div>
+      <h2>Hello, {user.name}! 👋</h2>
+      <p>Email: {user.email}</p>
+    </div>
+  );
+}
+
