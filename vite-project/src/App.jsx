@@ -161,12 +161,14 @@ import React from 'react'
 import UseEffectPrac from './components/useEffects/DegitalWatch'
 import WidthTracker from './components/useEffects/WidthTracker'
 import Featch from './components/useEffects/Featch'
+import SearchWithDebounce from './components/useEffects/SearchWithDebounce'
 function App() {
   return (
     <>
     {/* <UseEffectPrac/> */}
     {/* <WidthTracker/> */}
-    <Featch/>
+    {/* <Featch/> */}
+    <SearchWithDebounce/>
     </>
   )
 }
