@@ -158,17 +158,28 @@
 
 
 import React from 'react'
-import UseEffectPrac from './components/useEffects/DegitalWatch'
+
 import WidthTracker from './components/useEffects/WidthTracker'
 import Featch from './components/useEffects/Featch'
 import SearchWithDebounce from './components/useEffects/SearchWithDebounce'
+
+
+import LazyLoad from './components/LazyLoading/LazyLoad'
+import FocusOnMount from './components/useRefHook/FocusOnMount'
+import FocusOnClick from './components/useRefHook/FocusOnClick'
+
+ 
+
 function App() {
-  return (
+     return (
     <>
-    {/* <UseEffectPrac/> */}
-    {/* <WidthTracker/> */}
+     {/* <WidthTracker/> */}
     {/* <Featch/> */}
-    <SearchWithDebounce/>
+    {/* <SearchWithDebounce/> */}
+{/* <DegitalWatch/> */}
+     {/* <LazyLoad/> */}
+     {/* <FocusOnMount/> */}
+     <FocusOnClick/>
     </>
   )
 }
