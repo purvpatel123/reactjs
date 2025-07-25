@@ -167,6 +167,9 @@ import SearchWithDebounce from './components/useEffects/SearchWithDebounce'
 import LazyLoad from './components/LazyLoading/LazyLoad'
 import FocusOnMount from './components/useRefHook/FocusOnMount'
 import FocusOnClick from './components/useRefHook/FocusOnClick'
+import ShowPrev from './components/useRefHook/ShowPrev'
+import StopWatch from './components/useRefHook/StopWatch'
+import SumCalculate from './components/useMemoHook/SumCalculate'
 
  
 
@@ -179,7 +182,10 @@ function App() {
 {/* <DegitalWatch/> */}
      {/* <LazyLoad/> */}
      {/* <FocusOnMount/> */}
-     <FocusOnClick/>
+     {/* <FocusOnClick/> */}
+     {/* <ShowPrev/> */}
+     {/* <StopWatch/> */}
+     <SumCalculate/>
     </>
   )
 }
