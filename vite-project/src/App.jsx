@@ -170,6 +170,7 @@ import FocusOnClick from './components/useRefHook/FocusOnClick'
 import ShowPrev from './components/useRefHook/ShowPrev'
 import StopWatch from './components/useRefHook/StopWatch'
 import SumCalculate from './components/useMemoHook/SumCalculate'
+import Factorial from './components/useMemoHook/Factorial'
 
  
 
@@ -185,7 +186,8 @@ function App() {
      {/* <FocusOnClick/> */}
      {/* <ShowPrev/> */}
      {/* <StopWatch/> */}
-     <SumCalculate/>
+     {/* <SumCalculate/> */}
+     <Factorial/>
     </>
   )
 }
