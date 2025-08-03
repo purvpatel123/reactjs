@@ -158,7 +158,7 @@
 
 
 import React from 'react'
-
+import { BrowserRouter, Routes ,Route} from 'react-router-dom'
 import WidthTracker from './components/useEffects/WidthTracker'
 import Featch from './components/useEffects/Featch'
 import SearchWithDebounce from './components/useEffects/SearchWithDebounce'
@@ -171,6 +171,9 @@ import ShowPrev from './components/useRefHook/ShowPrev'
 import StopWatch from './components/useRefHook/StopWatch'
 import SumCalculate from './components/useMemoHook/SumCalculate'
 import Factorial from './components/useMemoHook/Factorial'
+import FilterListBase from './components/useMemoHook/FilterListBase'
+import Prac from './components/useNavigateHook/Prac'
+import PracTest from './components/useLocationHook/PracTest'
 
  
 
@@ -187,7 +190,15 @@ function App() {
      {/* <ShowPrev/> */}
      {/* <StopWatch/> */}
      {/* <SumCalculate/> */}
-     <Factorial/>
+     {/* <Factorial/> */}
+     {/* <FilterListBase/> */}
+     
+     <BrowserRouter>
+     <Routes>
+      <Route path="/" element={<Prac/>}/>
+       <Route path="/PracTest" element={<PracTest/>}/>
+     </Routes>
+     </BrowserRouter>
     </>
   )
 }
