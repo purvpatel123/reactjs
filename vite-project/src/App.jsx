@@ -174,7 +174,7 @@ import Factorial from './components/useMemoHook/Factorial'
 import FilterListBase from './components/useMemoHook/FilterListBase'
 import Prac from './components/useNavigateHook/Prac'
 import PracTest from './components/useLocationHook/PracTest'
-
+import RenderProps from './components/props/RenderProps'
  
 
 function App() {
@@ -193,12 +193,18 @@ function App() {
      {/* <Factorial/> */}
      {/* <FilterListBase/> */}
      
-     <BrowserRouter>
+     {/* <BrowserRouter>
      <Routes>
       <Route path="/" element={<Prac/>}/>
        <Route path="/PracTest" element={<PracTest/>}/>
      </Routes>
-     </BrowserRouter>
+     </BrowserRouter> */}
+     <RenderProps render={
+      ({x,y})=>(
+        <h1>render position:{x},{y}</h1>
+      )
+     }
+     />
     </>
   )
 }

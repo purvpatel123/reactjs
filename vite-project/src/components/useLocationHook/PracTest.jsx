@@ -6,7 +6,7 @@ function PracTest() {
   return (
     <>
     <div>data:{data}</div>
-   
+   <div>path:{location.pathname}</div>
     </>
   )
 }
