@@ -175,7 +175,9 @@ import FilterListBase from './components/useMemoHook/FilterListBase'
 import Prac from './components/useNavigateHook/Prac'
 import PracTest from './components/useLocationHook/PracTest'
 import RenderProps from './components/props/RenderProps'
- 
+import UserProvider from './components/usecontextHook/UserProvider'
+import Profile from './components/usecontextHook/Profile'
+ import Profile2 from './components/usecontextHook/Profile2'
 
 function App() {
      return (
@@ -199,12 +201,16 @@ function App() {
        <Route path="/PracTest" element={<PracTest/>}/>
      </Routes>
      </BrowserRouter> */}
-     <RenderProps render={
+     {/* <RenderProps render={
       ({x,y})=>(
         <h1>render position:{x},{y}</h1>
       )
      }
-     />
+     /> */}
+     <UserProvider>
+      <Profile/>
+      <Profile2/>
+     </UserProvider>
     </>
   )
 }
