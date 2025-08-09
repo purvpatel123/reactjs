@@ -178,8 +178,12 @@ import RenderProps from './components/props/RenderProps'
 import UserProvider from './components/usecontextHook/UserProvider'
 import Profile from './components/usecontextHook/Profile'
  import Profile2 from './components/usecontextHook/Profile2'
+import Hello from './components/HOC/Hello'
+import WithLogger from './components/HOC/WithLogger'
 
 function App() {
+  
+     const HelloWithLogger = WithLogger(Hello);
      return (
     <>
      {/* <WidthTracker/> */}
@@ -207,10 +211,16 @@ function App() {
       )
      }
      /> */}
-     <UserProvider>
+     {/* <UserProvider>
       <Profile/>
       <Profile2/>
-     </UserProvider>
+     </UserProvider> */}
+
+
+ <div>
+      <HelloWithLogger name="Purv" />
+      <HelloWithLogger name="React Learner" />
+    </div>
     </>
   )
 }
