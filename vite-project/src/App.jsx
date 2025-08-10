@@ -180,10 +180,10 @@ import Profile from './components/usecontextHook/Profile'
  import Profile2 from './components/usecontextHook/Profile2'
 import Hello from './components/HOC/Hello'
 import WithLogger from './components/HOC/WithLogger'
-
+import Counter from './components/CustomeHook/Counter'
 function App() {
   
-     const HelloWithLogger = WithLogger(Hello);
+    //  const HelloWithLogger = WithLogger(Hello);
      return (
     <>
      {/* <WidthTracker/> */}
@@ -216,11 +216,12 @@ function App() {
       <Profile2/>
      </UserProvider> */}
 
-
+{/* 
  <div>
       <HelloWithLogger name="Purv" />
       <HelloWithLogger name="React Learner" />
-    </div>
+    </div> */}
+    <Counter/>
     </>
   )
 }
