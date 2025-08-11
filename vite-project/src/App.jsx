@@ -181,6 +181,10 @@ import Profile from './components/usecontextHook/Profile'
 import Hello from './components/HOC/Hello'
 import WithLogger from './components/HOC/WithLogger'
 import Counter from './components/CustomeHook/Counter'
+import { BrowserRouter as Router } from 'react-router-dom'
+import About from './components/Routing/About'
+import Home from './components/Routing/Home'
+import Layout from './components/Routing/Layout'
 function App() {
   
     //  const HelloWithLogger = WithLogger(Hello);
@@ -221,7 +225,18 @@ function App() {
       <HelloWithLogger name="Purv" />
       <HelloWithLogger name="React Learner" />
     </div> */}
-    <Counter/>
+    {/* <Counter/> */}
+      <Router>
+        <Routes>
+          <Route path="/" element={<Layout/>}>
+          
+          <Route index element={<Home />}></Route>
+          <Route path="about" element={<About />}></Route> 
+          
+          </Route>
+        </Routes>
+      </Router>
+
     </>
   )
 }

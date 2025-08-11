@@ -4,9 +4,7 @@ function UseCountHook(initialCount=0) {
 
     const [count,setCount]=useState(initialCount);
     const increment=()=>{
-        setCount(count=>{
-            return count+1
-        }
+        setCount(count=>(Math.min(count+1,10))
         )
     }
     const decrement=()=>{
