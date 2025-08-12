@@ -1,8 +1,11 @@
 import React from 'react'
-
+import { useParams } from 'react-router-dom'
 function About() {
+  const { userId } = useParams();
   return (
-    <div>About</div>
+  <>
+  <h1>userId:{userId}</h1>
+  </>
   )
 }
 

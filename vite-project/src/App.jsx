@@ -79,7 +79,7 @@
 //     setTodo([...todo,text])
 //     setText(" ");
 //    }}>add todo</button>
-    
+
 // <ul>
 //   {todo.map((to,index)=>(
 // <li key={index}>{to}</li>
@@ -158,7 +158,7 @@
 
 
 import React from 'react'
-import { BrowserRouter, Routes ,Route} from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import WidthTracker from './components/useEffects/WidthTracker'
 import Featch from './components/useEffects/Featch'
 import SearchWithDebounce from './components/useEffects/SearchWithDebounce'
@@ -177,7 +177,7 @@ import PracTest from './components/useLocationHook/PracTest'
 import RenderProps from './components/props/RenderProps'
 import UserProvider from './components/usecontextHook/UserProvider'
 import Profile from './components/usecontextHook/Profile'
- import Profile2 from './components/usecontextHook/Profile2'
+import Profile2 from './components/usecontextHook/Profile2'
 import Hello from './components/HOC/Hello'
 import WithLogger from './components/HOC/WithLogger'
 import Counter from './components/CustomeHook/Counter'
@@ -185,55 +185,62 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import About from './components/Routing/About'
 import Home from './components/Routing/Home'
 import Layout from './components/Routing/Layout'
+import SearchPage from './components/Routing/SearchPage'
 function App() {
-  
-    //  const HelloWithLogger = WithLogger(Hello);
-     return (
+
+  //  const HelloWithLogger = WithLogger(Hello);
+  return (
     <>
-     {/* <WidthTracker/> */}
-    {/* <Featch/> */}
-    {/* <SearchWithDebounce/> */}
-{/* <DegitalWatch/> */}
-     {/* <LazyLoad/> */}
-     {/* <FocusOnMount/> */}
-     {/* <FocusOnClick/> */}
-     {/* <ShowPrev/> */}
-     {/* <StopWatch/> */}
-     {/* <SumCalculate/> */}
-     {/* <Factorial/> */}
-     {/* <FilterListBase/> */}
-     
-     {/* <BrowserRouter>
+      {/* <WidthTracker/> */}
+      {/* <Featch/> */}
+      {/* <SearchWithDebounce/> */}
+      {/* <DegitalWatch/> */}
+      {/* <LazyLoad/> */}
+      {/* <FocusOnMount/> */}
+      {/* <FocusOnClick/> */}
+      {/* <ShowPrev/> */}
+      {/* <StopWatch/> */}
+      {/* <SumCalculate/> */}
+      {/* <Factorial/> */}
+      {/* <FilterListBase/> */}
+
+      {/* <BrowserRouter>
      <Routes>
       <Route path="/" element={<Prac/>}/>
        <Route path="/PracTest" element={<PracTest/>}/>
      </Routes>
      </BrowserRouter> */}
-     {/* <RenderProps render={
+      {/* <RenderProps render={
       ({x,y})=>(
         <h1>render position:{x},{y}</h1>
       )
      }
      /> */}
-     {/* <UserProvider>
+      {/* <UserProvider>
       <Profile/>
       <Profile2/>
      </UserProvider> */}
 
-{/* 
+      {/* 
  <div>
       <HelloWithLogger name="Purv" />
       <HelloWithLogger name="React Learner" />
     </div> */}
-    {/* <Counter/> */}
+      {/* <Counter/> */}
       <Router>
         <Routes>
-          <Route path="/" element={<Layout/>}>
+          {/* <Route path="/" element={<Layout/>}>
           
           <Route index element={<Home />}></Route>
           <Route path="about" element={<About />}></Route> 
           
-          </Route>
+          </Route> */}
+
+          <Route path="/" element={<SearchPage/>} /> 
+
+          {/* Dynamic route */}
+          {/* <Route path="/users/:userId" element={<About/>} /> */}
+
         </Routes>
       </Router>
 

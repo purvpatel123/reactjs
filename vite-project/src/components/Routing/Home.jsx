@@ -1,9 +1,12 @@
-import React from 'react'
+import { Link } from "react-router-dom";
 
-function Home() {
+export default function Home() {
   return (
-    <div>Home</div>
-  )
+    <div>
+      <h1>Home Page</h1>
+      {/* Links with different userId values */}
+      <Link to="/users/1">User 1</Link> <br />
+      
+    </div>
+  );
 }
-
-export default Home
